@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Country extends Model
+class Tip extends Model
 {
     use SoftDeletes;
     use HasFactory;
 
-    public $table = 'countries';
+    public $table = 'tips';
 
     protected $dates = [
         'created_at',
@@ -21,16 +21,16 @@ class Country extends Model
     ];
 
     protected $fillable = [
-        'name',
-        'short_code',
+        'title',
+        'description',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
 
-    public function countriesTips()
+    public function countries()
     {
-        return $this->belongsToMany(Tip::class);
+        return $this->belongsToMany(Country::class);
     }
 
     protected function serializeDate(DateTimeInterface $date)
