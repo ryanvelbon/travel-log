@@ -46,17 +46,22 @@ class Trip extends Model
     ];
 
     protected $fillable = [
+        'status',
         'city_id',
         'starts_at',
         'ends_at',
         'arrived_by',
         'purpose',
-        'status',
         'description',
         'created_at',
         'updated_at',
         'deleted_at',
     ];
+
+    public function tripExpenses()
+    {
+        return $this->hasMany(Expense::class, 'trip_id', 'id');
+    }
 
     public function city()
     {

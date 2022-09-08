@@ -61,7 +61,7 @@ class TripController extends Controller
     {
         abort_if(Gate::denies('trip_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $trip->load('city');
+        $trip->load('city', 'tripExpenses');
 
         return view('admin.trips.show', compact('trip'));
     }

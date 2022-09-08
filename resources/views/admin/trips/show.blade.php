@@ -90,6 +90,22 @@
     </div>
 </div>
 
-
+<div class="card">
+    <div class="card-header">
+        {{ trans('global.relatedData') }}
+    </div>
+    <ul class="nav nav-tabs" role="tablist" id="relationship-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#trip_expenses" role="tab" data-toggle="tab">
+                {{ trans('cruds.expense.title') }}
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" role="tabpanel" id="trip_expenses">
+            @includeIf('admin.trips.relationships.tripExpenses', ['expenses' => $trip->tripExpenses])
+        </div>
+    </div>
+</div>
 
 @endsection

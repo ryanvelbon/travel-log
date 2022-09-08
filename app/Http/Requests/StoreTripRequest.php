@@ -17,6 +17,9 @@ class StoreTripRequest extends FormRequest
     public function rules()
     {
         return [
+            'status' => [
+                'required',
+            ],
             'city_id' => [
                 'required',
                 'integer',
@@ -28,9 +31,6 @@ class StoreTripRequest extends FormRequest
             'ends_at' => [
                 'date_format:' . config('panel.date_format'),
                 'nullable',
-            ],
-            'status' => [
-                'required',
             ],
             'description' => [
                 'string',

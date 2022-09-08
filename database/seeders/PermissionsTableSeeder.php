@@ -136,6 +136,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 32,
+                'title' => 'expense_create',
+            ],
+            [
+                'id'    => 33,
+                'title' => 'expense_edit',
+            ],
+            [
+                'id'    => 34,
+                'title' => 'expense_show',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'expense_delete',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'expense_access',
+            ],
+            [
+                'id'    => 37,
                 'title' => 'profile_password_edit',
             ],
         ];

@@ -36,6 +36,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Trip
     Route::delete('trips/destroy', 'TripController@massDestroy')->name('trips.massDestroy');
     Route::resource('trips', 'TripController');
+
+    // Expense
+    Route::delete('expenses/destroy', 'ExpenseController@massDestroy')->name('expenses.massDestroy');
+    Route::resource('expenses', 'ExpenseController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
