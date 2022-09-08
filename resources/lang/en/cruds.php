@@ -65,4 +65,22 @@ return [
             'deleted_at_helper'        => ' ',
         ],
     ],
+    'country' => [
+        'title'          => 'Countries',
+        'title_singular' => 'Country',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'name'              => 'Name',
+            'name_helper'       => ' ',
+            'short_code'        => 'Short Code',
+            'short_code_helper' => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
 ];
