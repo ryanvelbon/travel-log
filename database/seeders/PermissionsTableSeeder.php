@@ -176,6 +176,26 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 42,
+                'title' => 'tip_create',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'tip_edit',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'tip_show',
+            ],
+            [
+                'id'    => 45,
+                'title' => 'tip_delete',
+            ],
+            [
+                'id'    => 46,
+                'title' => 'tip_access',
+            ],
+            [
+                'id'    => 47,
                 'title' => 'profile_password_edit',
             ],
         ];
