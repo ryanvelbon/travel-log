@@ -31,22 +31,32 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     // City
     Route::delete('cities/destroy', 'CityController@massDestroy')->name('cities.massDestroy');
+    Route::post('cities/parse-csv-import', 'CityController@parseCsvImport')->name('cities.parseCsvImport');
+    Route::post('cities/process-csv-import', 'CityController@processCsvImport')->name('cities.processCsvImport');
     Route::resource('cities', 'CityController');
 
     // Trip
     Route::delete('trips/destroy', 'TripController@massDestroy')->name('trips.massDestroy');
+    Route::post('trips/parse-csv-import', 'TripController@parseCsvImport')->name('trips.parseCsvImport');
+    Route::post('trips/process-csv-import', 'TripController@processCsvImport')->name('trips.processCsvImport');
     Route::resource('trips', 'TripController');
 
     // Expense
     Route::delete('expenses/destroy', 'ExpenseController@massDestroy')->name('expenses.massDestroy');
+    Route::post('expenses/parse-csv-import', 'ExpenseController@parseCsvImport')->name('expenses.parseCsvImport');
+    Route::post('expenses/process-csv-import', 'ExpenseController@processCsvImport')->name('expenses.processCsvImport');
     Route::resource('expenses', 'ExpenseController');
 
     // Plan
     Route::delete('plans/destroy', 'PlanController@massDestroy')->name('plans.massDestroy');
+    Route::post('plans/parse-csv-import', 'PlanController@parseCsvImport')->name('plans.parseCsvImport');
+    Route::post('plans/process-csv-import', 'PlanController@processCsvImport')->name('plans.processCsvImport');
     Route::resource('plans', 'PlanController');
 
     // Tip
     Route::delete('tips/destroy', 'TipController@massDestroy')->name('tips.massDestroy');
+    Route::post('tips/parse-csv-import', 'TipController@parseCsvImport')->name('tips.parseCsvImport');
+    Route::post('tips/process-csv-import', 'TipController@processCsvImport')->name('tips.processCsvImport');
     Route::resource('tips', 'TipController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
