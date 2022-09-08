@@ -83,4 +83,22 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
+    'city' => [
+        'title'          => 'City',
+        'title_singular' => 'City',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'name'              => 'Name',
+            'name_helper'       => ' ',
+            'country'           => 'Country',
+            'country_helper'    => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated at',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted at',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
 ];

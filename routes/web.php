@@ -28,6 +28,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Countries
     Route::delete('countries/destroy', 'CountriesController@massDestroy')->name('countries.massDestroy');
     Route::resource('countries', 'CountriesController');
+
+    // City
+    Route::delete('cities/destroy', 'CityController@massDestroy')->name('cities.massDestroy');
+    Route::resource('cities', 'CityController');
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
